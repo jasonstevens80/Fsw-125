@@ -24,7 +24,7 @@ const Bounty = (props) => {
           </button>
           <button
             className="edit-btn"
-            onClick={() => setEditToggle((prevToggle) => !prevToggle)}
+            onClick={() => setEditToggle((prevToggle) => !prevToggle)} 
           >
             Edit
           </button>

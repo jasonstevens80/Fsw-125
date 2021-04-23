@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Oswald:300,400,700");
+
+html,
+body {
+  width: 100%;
+}
+
+footer {
+  background-color: #666;
+  bottom: 0;
+  border-top: 3px solid #03e8f43b;
+  box-shadow: 0px -10px 5px  #03e8f45b;
+  display: inline-block;
+  font-family: "Oswald", sans;
+  left: 0;
+  margin: 0;
+  opacity: 75%;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+}
+
+.footer-inner {
+  color: #fff;
+  padding: 15px;
+}
+.push {
+  height: 35vh;
+}
+
+@media only screen and (max-width: 480px) {
+  .push {
+    height: 4vh;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .footer {
+    box-shadow: none !important;
+  
+  }
+  .push {
+    height: 4vh;
+  }
+}

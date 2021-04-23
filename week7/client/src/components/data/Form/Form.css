@@ -1,0 +1,182 @@
+html {
+    height: 100%;
+  }
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /*----Toggle=false----*/
+  .container-a {
+    background: rgba(73, 72, 72, 0.8);
+    border: 3px solid #03e8f43b;
+    border-radius: 15px;
+    box-shadow: 0 15px 25px #03e8f45b;
+    box-sizing: border-box;
+    left: 20%;
+    margin-top: 37vh;
+    padding: 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 350px;
+  }
+  .container-a .user-box #inputs-a {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 30px;
+    outline: none;
+    padding: 10px 0;
+    width: 100%;
+  }
+  .container-a .user-box #inputs-a::placeholder {
+    color: #fff;
+  }
+  .container-a .user-box #inputs-a:focus ~ label,
+  .container-a .user-box #inputs-a:valid ~ label {
+    color: #03e9f4;
+    font-size: 12px;
+    left: 0;
+    top: -20px;
+  }
+  .container-a #form-a #submit {
+    display: block;
+    color: #03e9f4;
+    font-size: 16px;
+    letter-spacing: 4px;
+    margin-top: 40px;
+    overflow: hidden;
+    padding: 10px 20px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+  }
+  .container-a #submit:hover {
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+      0 0 100px #03e9f4;
+  }
+  /*
+  ----Toggle=true----
+  */
+  .container-b {
+    background: rgba(73, 72, 72, 0.8);
+    border: 3px solid #03e8f43b;
+    border-radius: 15px;
+    box-shadow: 0 15px 25px #03e8f45b;
+    grid-column: 2;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    padding: 20px;
+    text-align: center;
+    top: 500px;
+    width: 16em;
+  }
+  .container-b .small-box #inputs-b {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 30px;
+    outline: none;
+    padding: 10px 0;
+    width: 100%;
+  }
+  .container-b .small-box #inputs-b::placeholder {
+    color: #fff;
+  }
+  .container-b .small-box #inputs-b:focus ~ label,
+  .container-b .small-box #inputs-b:valid ~ label {
+    color: #03e9f4;
+    font-size: 12px;
+    left: 0;
+    top: -20px;
+  }
+  .container-b #form-b #submit {
+    color: #03e9f4;
+    display: inline-block;
+    font-size: 16px;
+    letter-spacing: 4px;
+    margin-top: 40px;
+    overflow: hidden;
+    padding: 10px 20px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+  }
+  .container-b #submit:hover {
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+      0 0 100px #03e9f4;
+  }
+  @media only screen and (max-width: 750px) {
+    .container-a {
+      display: initial !important;
+      position: initial !important;
+      /* left: 0%; */
+      border-radius: 0px;
+      border: none;
+      box-shadow: none;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .container-a .user-box #inputs-a {
+      /* background: rgba(73, 72, 72, 0.8); */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.425);
+      margin-bottom: 0px;
+      margin-top: 0;
+      outline: none;
+      text-align: center;
+    }
+    form {
+      background: rgba(73, 72, 72, 0.8);
+    }
+    .container-a #form-a #submit {
+      text-align: center;
+      /* display: block;  */
+      margin-left: 220px;
+      margin-bottom:20px; 
+    }
+    #form-b {
+      background: rgba(73, 72, 72, 0);
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    .container-b {
+      position: initial !important;
+      background: rgba(73, 72, 72, 0.8);
+      margin: 0 !important;
+      border-radius: 0px;
+      width: 438px;
+    }
+    .container-b .small-box #inputs-b {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.425);
+      margin-bottom: 0px;
+      margin-top: 0;
+      text-align: center;
+    }
+    .container-b #form-b #submit {
+      padding: 15px 30px;
+      display:block;         
+      margin:0 auto;
+      /* width: 200px; */
+    }
+    .container-a #form-a #submit {
+      text-align: center;
+      /* display: block;  */
+      margin-left: 80px;
+      margin-bottom:20px; 
+    }
+    #form-b {
+      background: rgba(73, 72, 72, 0);
+    }
+  }

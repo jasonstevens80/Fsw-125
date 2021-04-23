@@ -4,7 +4,7 @@ const bountyRouter = express.Router(); // my router variable to handle routes, w
 const { v4: uuidv4 } = require('uuid'); // My variable importing uuid
 
 // Here is an array of bounty data for my server
-const bounty = [
+const bounties = [
     {
       firstName: "Kylo",
       lastName: "Wren",
@@ -42,38 +42,26 @@ const bounty = [
 // Routes
 
 //Get  all request
-bountyRouter.get("/", (req, res) => {
-  const bountyId =req.params.bountyId
-  const foundBounty = bounty.find(hunter => hunter.id ===bountyId)
-  res.send(foundBounty)
-
-
-  // a route to get the data from array
+bountyRouter.get("/", (req, res) => { // a route to get the data from array
   res.send(bounty);
 });
 //Get one request
-bountyRouter.get("/:bountyId", (req, res) => {
+bountyRouter.get("/:bountyId", (req, res, next) => {
     const bountyId = req.params.bountyId
-    const bountyIndex = bounty.findindex(bounty => bounty._id === bountyId)
-    if(!bountyIndex){
+    const foundBounty = bounty.find(bounty => bounty._id === bountyId)
+    if(!foundBounty) {
+      const error = new Error(`The bounty with id of ${thingId} NOT FOUND.`)
       res.status(500)
-      const error = new error ("The item Could not be found")
       return next(error)
     }
-    res.status(200).send(hunterIndex)
-})
-
-bountyRouter.get("search/type", (req, res)=>{
-  const type = req.query.firstName
-  const filteredHunters = bounty.filter(hunter => hunter.type ===tupe)
-  res.send(filteredHunters)
+    res.status(500).send(foundBounty)
 })
 //Post request
 bountyRouter.post("/", (req, res) => { // a route to post data to the array
   const newBounty = req.body; //to add an id to new objects added to array
-  newBounty._id = uuidv4();
+  newBounty._id === uuidv4();
   bounty.push(newBounty);
-  res.send(newBounty);
+  res.status(201).send(newBounty);
 });
 //Delete request
 bountyRouter.delete("/:bountyId", (req, res) => {
@@ -89,8 +77,7 @@ bountyRouter.put("/:bountyId", (req, res) => {
     const bountyIndex = bounty.findIndex(bounty => bounty._id === bountyId)
     const updatedBounty = Object.assign(bounty[bountyIndex], updateObject) 
     //First param is finding the object and second is what we'd like to replace it with merging both params
-    res.send(updatedBounty)
+    res.status(201).send(updatedBounty)
 })
-
 
 module.exports = bountyRouter; // exporting variable to server to handle request
