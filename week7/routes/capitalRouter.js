@@ -6,68 +6,48 @@ const { v4: uuidv4 } = require('uuid'); // My variable importing uuid
 // Here is an array of capital data for my server
 const capitals = [
   {
-    capital: "Captain America",
+    capital: "Alex Ovechkin",
     active: "True",
-    drafted: 1941,
-    position: "Strength",
+    drafted: 2004,
+    position: "Left Wing",
     _id: uuidv4(),
   },
   {
-    capital: "Iron Man",
+    capital: "Nick",
+    active: "Backstrom",
+    drafted: 2006,
+    position: "Center",
+    _id: uuidv4(),
+  },
+  {
+    capital: "Evgeny Kuznetsov",
+    active: "True",
+    drafted: 2010,
+    position: "Center",
+    _id: uuidv4(),
+  },
+  {
+    capital: "John Carlson",
+    active: "True",
+    drafted: 2008,
+    position: "Defense",
+    _id: uuidv4(),
+  },
+  {
+    capital: "TJ Oshie",
+    active: "True",
+    drafted: 2005,
+    position: "Right Wing",
+    _id: uuidv4(),
+  },
+  {
+    capital: "Dale Hunter",
     active: "False",
-    drafted: 1963,
-    position: "Flight",
+    drafted: 1979,
+    position: "Center",
     _id: uuidv4(),
   },
-  {
-    capital: "Thor",
-    active: "True",
-    drafted: 1962,
-    position: "Electric manipulation",
-    _id: uuidv4(),
-  },
-  {
-    capital: "Hulk",
-    active: "True",
-    drafted: 1962,
-    position: "Strength",
-    _id: uuidv4(),
-  },
-  {
-    capital: "Vision",
-    active: "false",
-    drafted: 1968,
-    position: "Flight",
-    _id: uuidv4(),
-  },
-  {
-    capital: "Scarlet Witch",
-    active: "True",
-    drafted: 1964,
-    position: "Telekinesis",
-    _id: uuidv4(),
-  },
-  {
-    capital: "Falcon",
-    active: "True",
-    drafted: 1969,
-    position: "Flight",
-    _id: uuidv4(),
-  },
-  {
-    capital: "Black Widow",
-    active: "false",
-    drafted: 1964,
-    position: "Espionage",
-    _id: uuidv4(),
-  },
-  {
-    capital: "Captain Marvel",
-    active: "True",
-    drafted: 1964,
-    position: "Flight",
-    _id: uuidv4(),
-  },
+
 ];
 
 // Routes

@@ -8,8 +8,8 @@ body {
 footer {
   background-color: #666;
   bottom: 0;
-  border-top: 3px solid #03e8f43b;
-  box-shadow: 0px -10px 5px  #03e8f45b;
+  border-top: 3px solid rgb(39, 64, 134);
+  box-shadow: 0px -10px 5px  red;
   display: inline-block;
   font-family: "Oswald", sans;
   left: 0;

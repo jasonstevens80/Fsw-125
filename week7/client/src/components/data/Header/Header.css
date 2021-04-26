@@ -1,8 +1,8 @@
 .head-container {
     align-items: center;
     background: rgba(73, 72, 72, 0.8);
-    border-bottom: 3px solid #03e8f43b;
-    box-shadow: 0 15px 25px #03e8f45b;
+    border-bottom: 3px solid rgb(39, 64, 134);
+    box-shadow: 0 15px 25px red;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     height: 20vh;

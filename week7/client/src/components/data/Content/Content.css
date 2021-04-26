@@ -1,8 +1,8 @@
 .card {
     background: rgba(73, 72, 72, 0.8);
-    border: 3px solid #03e8f43b;;
+    border: 3px solid rgb(39, 64, 134);
     border-radius: 5%;
-    box-shadow: 0 15px 25px #03e8f45b;
+    box-shadow: 0 15px 25px red;
     margin-left: auto;
     margin-right: auto;
     margin-top: 5vh;
@@ -23,7 +23,7 @@
   @media only screen and (max-width: 750px) {
     .card {
       background: rgba(73, 72, 72, 0.8);
-      border: 1px solid #03e8f45d;
+      border: 1px solid red;
       border-radius: 0px;
       padding-left: 0%;
       padding-right: 0%;
