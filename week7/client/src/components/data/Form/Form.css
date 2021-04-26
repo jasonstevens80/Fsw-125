@@ -37,14 +37,14 @@ html {
   }
   .container-a .user-box #inputs-a:focus ~ label,
   .container-a .user-box #inputs-a:valid ~ label {
-    color: #03e9f4;
+    color: red;
     font-size: 12px;
     left: 0;
     top: -20px;
   }
   .container-a #form-a #submit {
     display: block;
-    color: #03e9f4;
+    color: red;
     font-size: 16px;
     letter-spacing: 4px;
     margin-top: 40px;
@@ -58,8 +58,8 @@ html {
   .container-a #submit:hover {
     color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
-      0 0 100px #03e9f4;
+    box-shadow: 0 0 5px red, 0 0 25px red, 0 0 50px red,
+      0 0 100px red;
   }
   /*
   ----Toggle=true----
