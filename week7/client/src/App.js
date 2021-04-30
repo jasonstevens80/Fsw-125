@@ -10,22 +10,23 @@ export default function App() {
   const [capital, setCapital] = useState([]);
   //displays data
   const getCapitals = () => {
+    
     axios
-      .get("/capitals")
+      .get("http://localhost:9000/capitals")
       .then((res) => setCapital(res.data)) // to update state
       .catch((err) => console.log(err)); // in case of an error
   };
   // Search data 
     const searchCapitals = (capital) => {
       axios
-        .get(`/capitals/search/capital?type=${capital}`)
+        .get(`http://localhost:9000/capitals/search/capital?type=${capital}`)
         .then((res) => setCapital(res.data)) // to update state
         .catch((err) => console.log(err)); // in case of an error
     };
   // add post
   const postCapital = (newCapital) => {
     axios
-      .post("/capitals", newCapital)
+      .post("http://localhost:9000/capitals", newCapital)
       .then((res) => {
         // setCapital((prevcapital) => [...prevcapital, res.data]);
         getCapitals();
@@ -35,7 +36,7 @@ export default function App() {
   // Delete post
   const deleteCapital = (capitalId) => {
     axios
-      .delete(`/capitals/${capitalId}`)
+      .delete(`http://localhost:9000/capitals/${capitalId}`)
       .then((res) => {
         getCapitals()
         // setCapital((prevcapital) =>
@@ -46,7 +47,7 @@ export default function App() {
   };
   // Put request - needs id and req.body
   const updateCapital = (updates, capitalId) => {
-    axios.put(`/capitals/${capitalId}`, updates)
+    axios.put(`http://localhost:9000/capitals/${capitalId}`, updates)
       .then((res) => {
         getCapitals()
         // setCapital((prevcapital) =>

@@ -47,6 +47,20 @@ const capitals = [
     position: "Center",
     _id: uuidv4(),
   },
+  {
+    capital: "Rod Langway",
+    active: "False",
+    drafted: 1977,
+    position: "Defense",
+    _id: uuidv4(),
+  },
+  {
+    capital: "Peter Bondra",
+    active: "False",
+    drafted: 1990,
+    position: "Right Wing",
+    _id: uuidv4(),
+  },
 
 ];
 
