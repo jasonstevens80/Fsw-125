@@ -7,26 +7,30 @@ import Footer from "./components/data/Footer/Footer";
 import "./styles.css";
 
 export default function App() {
+  const serverUrl = "http://localhost"
+  const serverPort = 9010; 
+  const endPoint = `${serverUrl}: ${serverPort}`;
+  
   const [capital, setCapital] = useState([]);
   //displays data
   const getCapitals = () => {
     
     axios
-      .get("http://localhost:9000/capitals")
+      .get("http://localhost:9010/capitals")
       .then((res) => setCapital(res.data)) // to update state
       .catch((err) => console.log(err)); // in case of an error
   };
   // Search data 
     const searchCapitals = (capital) => {
       axios
-        .get(`http://localhost:9000/capitals/search/capital?type=${capital}`)
+        .get(`http://localhost:9010/capitals/search/capital?type=${capital}`)
         .then((res) => setCapital(res.data)) // to update state
         .catch((err) => console.log(err)); // in case of an error
     };
   // add post
   const postCapital = (newCapital) => {
     axios
-      .post("http://localhost:9000/capitals", newCapital)
+      .post("http://localhost:9010/capitals", newCapital)
       .then((res) => {
         // setCapital((prevcapital) => [...prevcapital, res.data]);
         getCapitals();
@@ -36,7 +40,7 @@ export default function App() {
   // Delete post
   const deleteCapital = (capitalId) => {
     axios
-      .delete(`http://localhost:9000/capitals/${capitalId}`)
+      .delete(`http://localhost:9010/capitals/${capitalId}`)
       .then((res) => {
         getCapitals()
         // setCapital((prevcapital) =>
@@ -47,7 +51,7 @@ export default function App() {
   };
   // Put request - needs id and req.body
   const updateCapital = (updates, capitalId) => {
-    axios.put(`http://localhost:9000/capitals/${capitalId}`, updates)
+    axios.put(`http://localhost:9010/capitals/${capitalId}`, updates)
       .then((res) => {
         getCapitals()
         // setCapital((prevcapital) =>

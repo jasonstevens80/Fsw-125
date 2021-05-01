@@ -1,6 +1,8 @@
 const express = require("express");
 const morgan = require("morgan");
 const app = express();
+
+const nodePort = 9010
 //https://www.cluemediator.com/how-to-enable-cors-in-node-js
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -17,6 +19,6 @@ app.use((err, req, res, next) => {
   console.log(err)
   res.send({errMsg: err.message})
 })
-app.listen(9000, () => {
-  console.log("App is listening on port 9000!");
+app.listen(nodePort, () => {
+  console.log(`App is listening on port ${nodePort}!`);
 });

@@ -13,8 +13,8 @@ const capitals = [
     _id: uuidv4(),
   },
   {
-    capital: "Nick",
-    active: "Backstrom",
+    capital: "Nick Backstrom",
+    active: "True",
     drafted: 2006,
     position: "Center",
     _id: uuidv4(),
